@@ -1,4 +1,4 @@
-# Product-List-and-Cart-Management--MERN_STACK_Ecommerce_App
+# Product-List-and-Cart-Management--MERN_STACK_Project
 
 ## Description
 This project is a product list and cart management system built using **Node.js**, **React**, **React Context API**, and **MongoDB**. It includes a functional cart, user authentication, admin panel for product management, and responsive design.
