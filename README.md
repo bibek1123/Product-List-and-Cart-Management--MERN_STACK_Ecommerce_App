@@ -77,7 +77,7 @@ Ensure you have the following installed:
 
 4. Install dependencies for the frontend:
    ```bash
-   cd ../frontend
+   cd ../client
    npm install
    ```
 
@@ -97,7 +97,7 @@ PORT=5000
 ### Running the Backend
 1. Navigate to the `backend` directory:
    ```bash
-   cd backend
+   cd server
    ```
 2. Start the server:
    ```bash
@@ -107,7 +107,7 @@ PORT=5000
 ### Running the Frontend
 1. Navigate to the `frontend` directory:
    ```bash
-   cd ../frontend
+   cd ../client
    ```
 2. Start the React development server:
    ```bash
@@ -121,22 +121,23 @@ The application will be accessible at `http://localhost:3000`.
 ## API Endpoints
 
 ### Authentication
-- `POST /api/auth/login` - Login user (admin or regular).
+- `POST /api/v1/auth/login` - Login user (admin or regular).
+- `POST /api/v1/auth/register` - Register a user (admin or regular).
 
 ### Products
-- `GET /api/products` - Fetch all products.
-- `POST /api/products` - Add a new product (Admin only).
-- `PUT /api/products/:id` - Update product details (Admin only).
-- `DELETE /api/products/:id` - Delete a product (Admin only).
+- `GET /api/v1/user/product/list` - Fetch all products.
+- `POST /api/v1/admin/product/create` - Add a new product (Admin only).
+- `PUT /api/v1/admin/product/updateById/:id` - Update product details (Admin only).
+- `DELETE /api/v1/admin/product/deleteById/:id` - Delete a product (Admin only).
 
 ### Cart
-- `POST /api/cart` - Add item to the cart.
-- `PUT /api/cart/:id` - Update cart item quantity.
-- `DELETE /api/cart/:id` - Remove item from the cart.
+- `POST /api/v1/cart` - Add item to the cart.
+- `PUT /api/v1/cart/:id` - Update cart item quantity.
+- `DELETE /api/v1/cart/:id` - Remove item from the cart.
 
 ### Orders
-- `POST /api/orders` - Confirm order.
-- `DELETE /api/orders` - Reset order.
+- `POST /api/v1/admin/orders/updateById/:id` - Confirm order.
+- `DELETE /api/v1/admin/orders/deleteById/:id` - Reset order.
 
 ---
 
@@ -153,11 +154,5 @@ Ensure all interactive elements can be accessed and operated using only the keyb
 ---
 
 ## Future Enhancements
-- Add user registration and profile management.
+- Add profile management.
 - Implement payment gateway integration.
-- Improve accessibility with ARIA roles and labels.
-
----
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
